@@ -6,15 +6,10 @@ use crate::service::Service;
 use crate::storage;
 use crate::verification_method::VerificationMethodEntry;
 use soroban_sdk::{
-    contract, contractimpl, contractmeta, panic_with_error, Address, BytesN, Env, String, Vec,
+    contract, contractimpl, panic_with_error, Address, BytesN, Env, String, Vec,
 };
 
 const VERSION: &str = env!("CARGO_PKG_VERSION");
-
-contractmeta!(
-    key = "Description",
-    val = "Smart contract for decentralized identifiers (DIDs)",
-);
 
 #[contract]
 pub struct DIDContract;
